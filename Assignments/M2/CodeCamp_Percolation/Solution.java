@@ -36,8 +36,8 @@ import java.util.Scanner;
  *
  * @param      N     { parameter_description }
  */
-    public Percolation(final int N) {
-    	this.n = N;
+    public Percolation(final int n) {
+    	this.n = n;
     	this.size = n * n;
     	this.first = size;
     	this.last = size + 1;
@@ -136,19 +136,24 @@ import java.util.Scanner;
     }
      
 }
-// You can implement the above API to solve the problem
+/**
+ * Class for solution.
+ */
 public class Solution {
-	static int row;
-	static int col;
-	public static void main(String[] args) {
+	private Solution() {
+
+	}
+	public static void main(final String[] args) {
 	    Scanner sc = new Scanner(System.in);
-		int N = Integer.parseInt(sc.nextLine());
-		Percolation pe = new Percolation(N);
+		int n = Integer.parseInt(sc.nextLine());
+		Percolation pe = new Percolation(n);
 		// int[][] arr = new int[li][li];
 		while (sc.hasNext()) {
 		String[] tokens = sc.nextLine().split(" ");
-		pe.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+		pe.open(Integer.parseInt(tokens[0]), 
+			Integer.parseInt(tokens[1]));
 		}
-		System.out.println(pe.percolates() && pe.numberOfOpenSites() != 0);
+		System.out.println(pe.percolates() 
+			&& pe.numberOfOpenSites() != 0);
 	}
 }
