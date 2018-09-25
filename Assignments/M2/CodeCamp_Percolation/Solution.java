@@ -110,8 +110,9 @@ public class Solution {
 		while (sc.hasNext()) {
 			int row = sc.nextInt();
 			int col = sc.nextInt();
-			System.out.println(row+" "+col);
-			//pe.open(row, col);
+			//System.out.println(row+" "+col);
+			pe.open(row, col);
+			pe.percolates();
 			//arr[row][col] = 1;
 			//System.out.println(arr);
 		}
