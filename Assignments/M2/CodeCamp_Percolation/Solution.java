@@ -110,14 +110,13 @@ public class Solution extends Percolation{
 		int N = Integer.parseInt(sc.nextLine());
 		// int[][] arr = new int[li][li];
 		while (sc.hasNext()) {
-			row = sc.nextInt();
-			col = sc.nextInt();
-			System.out.println(row+" "+col);
+		String[] tokens = sc.nextLine().split(" ");
+		pe.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
 			//pe.open(row, col);
 			//arr[row][col] = 1;
 			//System.out.println(arr);
 		}
-		//System.out.println(pe.percolates());
+		System.out.println(pe.percolates());
 		
 
 
