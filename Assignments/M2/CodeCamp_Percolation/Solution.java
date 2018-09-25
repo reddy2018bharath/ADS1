@@ -66,7 +66,7 @@ import java.util.Scanner;
      * @param      i     { parameter_description }
      * @param      j     { parameter_description }
      */
-    public void LinkOpenSites(final int i, final int j) {
+    public void linkOpenSites(final int i, final int j) {
         if (connected[j] && !wqf.connected(i, j)) {
             wqf.union(i, j);
         }
@@ -97,23 +97,23 @@ import java.util.Scanner;
 
     }
         if (bottom < size) {
-            LinkOpenSites(index, bottom);
+            linkOpenSites(index, bottom);
         }
         if (top >= 0) {
-            LinkOpenSites(index, top);
+            linkOpenSites(index, top);
         }
         if (j == 1) {
             if (j != n) {
-            LinkOpenSites(index, index + 1);
+            linkOpenSites(index, index + 1);
         }
         return;
         }
         if (j == n) {
-            LinkOpenSites(index, index - 1);
+            linkOpenSites(index, index - 1);
             return;
         }
-        LinkOpenSites(index, index + 1);
-        LinkOpenSites(index, index - 1);
+        linkOpenSites(index, index + 1);
+        linkOpenSites(index, index - 1);
     }
     /**
      * Determines if open.
