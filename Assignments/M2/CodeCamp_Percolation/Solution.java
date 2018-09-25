@@ -34,10 +34,10 @@ import java.util.Scanner;
 /**
  * Constructs the object.
  *
- * @param      n     { parameter_description }
+ * @param      n1     { parameter_description }
  */
-    Percolation(final int n) {
-        this.n = n;
+    Percolation(final int n1) {
+        this.n = n1;
         this.size = n * n;
         this.first = size;
         this.last = size + 1;
@@ -105,7 +105,7 @@ import java.util.Scanner;
         if (j == 1) {
             if (j != n) {
             LinkOpenSites(index, index + 1);
-        } 
+        }
         return;
         }
         if (j == n) {
@@ -159,7 +159,7 @@ public final class Solution {
         pe.open(Integer.parseInt(tokens[0]),
             Integer.parseInt(tokens[1]));
         }
-        System.out.println(pe.percolates() 
+        System.out.println(pe.percolates()
             && pe.numberOfOpenSites() != 0);
     }
 }
