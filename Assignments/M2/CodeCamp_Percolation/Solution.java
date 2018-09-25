@@ -13,6 +13,7 @@ import java.util.Scanner;
     	this.first = size;
     	this.last = size + 1;
     	this.count = 0;
+    	connected = new boolean[size];
     	wqf = new WeightedQuickUnionUF(size + 2);
     	for (int i = 0; i < n; i++) {
     		wqf.union(first, i);
