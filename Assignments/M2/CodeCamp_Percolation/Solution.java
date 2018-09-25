@@ -50,7 +50,9 @@ import java.util.Scanner;
     		LinkOpenSites(index, top);
     	}
     	if (j == 1) {
+    		if (j !=n) {
     		LinkOpenSites(index, index + 1);
+    	}
     	}
     	if (j == n) {
     		LinkOpenSites(index, index - 1);
