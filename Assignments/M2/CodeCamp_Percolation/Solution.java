@@ -1,52 +1,62 @@
 import java.util.Scanner;
  class Percolation {
-    private boolean[][] grid;
+ 	private int n;
+ 	private int size;
+ 	private int first;
+ 	private int last;
     private WeightedQuickUnionUF wqf;
-    private int gridSize;
-    Percolation() {
-
+    private boolean[] connected;
+    private int count;
+    public Percolation(int N) {
+    	this.n = N;
+    	this.size = n * n;
+    	this.first = size;
+    	this.last = size + 1;
+    	this.count = 0;
+    	wqf = new WeightedQuickUnionUF(size + 2);
+    	for (int i = 0; i < n; i++) {
+    		wqf.union(first, i);
+    		wqf.union(last, size - i - 1);
+    	}
     }
-
-    public Percolation(int N)              // create N-by-N grid, with all sites blocked
-    {
-        gridSize = N;
-        grid = new boolean[N][N];
-        wqf = new WeightedQuickUnionUF((N*N));
-        for(int i = 0; i < N; i++)
-        {
-            for(int j = 0; j < N; j++)
-            {
-                grid[i][j] = false;
-            }
-        }
+    public int indexOf(int i, int j) {
+    	return n*(i-1) + (j-1);
     }
-    public void open(int i, int j)         // open site (row i, column j) if it is not already
-    {
-        int ai = i-1;
-        int aj = j-1;
-        grid[ai][aj] = true;
-        if (ai-1 >= 0 && isOpen(i - 1, j))  //left
-        {
-            wqf.union(to2D(i,j),to2D(i-1,j));
-        }
-        if (ai+1 < gridSize && isOpen(i + 1, j))         //right
-        {
-            wqf.union(to2D(i,j),to2D(i+1,j));
-        }
-        if (aj-1 >= 0 && isOpen(i, j-1))     //up
-        {
-            wqf.union(to2D(i,j),to2D(i,j-1));
-        }
-        if (aj+1 < gridSize && isOpen(i, j+1))     //down
-        {
-            wqf.union(to2D(i,j),to2D(i,j+1));
-        }
+    public void LinkOpenSites(int i, int j) {
+    	if (connected[j] && wqf.connected(i, j)) {
+    		wqf.union(i,j);
+    	}
     }
+    public int numberOfOpenSites() {
+    	return count;
+    }
+    // open site (row i, column j) if it is not already
+    public void open(int i, int j) {
+    	int index = indexOf(i, j);
+    	connected[index] = true;
+    	count++;
+    	int bottom = index + n;
+    	int top = index - n;
+    	if (bottom < size) {
+    		LinkOpenSites(index, bottom);
+    	}
+    	if (top >= 0) {
+    		LinkOpenSites(index, top);
+    	}
+    	if (j == 1) {
+    		LinkOpenSites(index, index + 1);
+    	}
+    	if (j == n) {
+    		LinkOpenSites(index, index - 1);
+    	}
+    	LinkOpenSites(index, index + 1);
+    	LinkOpenSites(index, index - 1);
+    }        
     public boolean isOpen(int i, int j)    // is site (row i, column j) open?
     {
-        return grid[i-1][j-1];
+        return connected[indexOf(i, j)];
     }
-    public boolean isFull(int i, int j)    // is site (row i, column j) full?
+    /*public boolean isFull(int i, int j)    // is site (row i, column j) full?
     {
         if(isOpen(i,j))
         {
@@ -57,57 +67,22 @@ import java.util.Scanner;
             }
         }
         return false;
+    }*/
+    public boolean percolates() {
+    	return wqf.connected(first, last);
     }
-    public boolean percolates()            // does the system percolate?
-    {
-        if (gridSize == 1)
-        {
-            if (isOpen(1,1))
-            {
-                return true;
-            }
-            return false;
-        }
-        if(gridSize == 2)
-        {
-            if (wqf.connected(0,3)) return true;
-            if (wqf.connected(1,2)) return true;
-            if (wqf.connected(0,2)) return true;
-            if (wqf.connected(1,3)) return true;
-            return false;
-        }
-
-
-        for (int i = (gridSize * (gridSize - 1))-1; i < (gridSize * gridSize); i++)
-        {
-           // System.out.println((gridSize * (gridSize - 1))-1);
-            //System.out.println(gridSize * gridSize-1);
-            for (int i2 = 0; i2 < gridSize; i2++)
-            {
-                //System.out.println(i);
-                //System.out.println(i2);
-                //System.out.print(wqf.connected(i, i2));
-                if (wqf.connected(i, i2)) return true;
-
-            }
-        }
-        return false;
-    }
-      private int to2D(int i, int j)
-    {
-        return (i-1)*gridSize+(j-1);
-    }
+     
 }
 
 
 // You can implement the above API to solve the problem
-public class Solution extends Percolation{
+public class Solution {
 	static int row;
 	static int col;
 	public static void main(String[] args) {
-		Percolation pe = new Percolation();
-		Scanner sc = new Scanner(System.in);
+	    Scanner sc = new Scanner(System.in);
 		int N = Integer.parseInt(sc.nextLine());
+		Percolation pe = new Percolation(N);
 		// int[][] arr = new int[li][li];
 		while (sc.hasNext()) {
 		String[] tokens = sc.nextLine().split(" ");
@@ -116,7 +91,7 @@ public class Solution extends Percolation{
 			//arr[row][col] = 1;
 			//System.out.println(arr);
 		}
-		System.out.println(pe.percolates());
+		System.out.println(pe.percolates() && pe.numberOfOpenSites() != 0);
 		
 
 
