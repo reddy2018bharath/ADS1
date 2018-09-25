@@ -24,7 +24,7 @@ import java.util.Scanner;
     	return n*(i-1) + (j-1);
     }
     public void LinkOpenSites(int i, int j) {
-    	if (connected[j] && wqf.connected(i, j)) {
+    	if (connected[j] && !wqf.connected(i, j)) {
     		wqf.union(i,j);
     	}
     }
