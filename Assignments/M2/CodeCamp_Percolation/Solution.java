@@ -38,6 +38,11 @@ import java.util.Scanner;
     	count++;
     	int bottom = index + n;
     	int top = index - n;
+    	if (n == 1) {
+   		wqf.union(first, index);
+   		wqf.union(last, index);
+
+   	}
     	if (bottom < size) {
     		LinkOpenSites(index, bottom);
     	}
