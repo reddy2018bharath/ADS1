@@ -101,21 +101,24 @@ import java.util.Scanner;
 
 
 // You can implement the above API to solve the problem
-public class Solution {
+public class Solution extends Percolation{
+	static int row;
+	static int col;
 	public static void main(String[] args) {
 		Percolation pe = new Percolation();
 		Scanner sc = new Scanner(System.in);
 		int N = Integer.parseInt(sc.nextLine());
 		// int[][] arr = new int[li][li];
 		while (sc.hasNext()) {
-			int row = sc.nextInt();
-			int col = sc.nextInt();
-			//System.out.println(row+" "+col);
-			pe.open(row, col);
-			pe.percolates();
+			row = sc.nextInt();
+			col = sc.nextInt();
+			System.out.println(row+" "+col);
+			//pe.open(row, col);
 			//arr[row][col] = 1;
 			//System.out.println(arr);
 		}
+		//System.out.println(pe.percolates());
+		
 
 
 	}
