@@ -4,7 +4,7 @@ import java.util.Scanner;
     private WeightedQuickUnionUF wqf;
     private int gridSize;
     Percolation() {
-    	
+
     }
 
     public Percolation(int N)              // create N-by-N grid, with all sites blocked
@@ -110,6 +110,7 @@ public class Solution {
 		while (sc.hasNext()) {
 			int row = sc.nextInt();
 			int col = sc.nextInt();
+			System.out.println(row);
 			pe.open(row, col);
 			//arr[row][col] = 1;
 			//System.out.println(arr);
