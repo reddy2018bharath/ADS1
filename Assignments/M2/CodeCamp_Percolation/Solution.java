@@ -52,10 +52,11 @@ import java.util.Scanner;
     	if (j == 1) {
     		if (j !=n) {
     		LinkOpenSites(index, index + 1);
-    	}
+    	} return;
     	}
     	if (j == n) {
     		LinkOpenSites(index, index - 1);
+    		return;
     	}
     	LinkOpenSites(index, index + 1);
     	LinkOpenSites(index, index - 1);
