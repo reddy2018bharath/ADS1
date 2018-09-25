@@ -1,13 +1,42 @@
 import java.util.Scanner;
+/**
+ * Class for percolation.
+ */
  class Percolation {
+ /**
+  * { integer variable }
+  */
  	private int n;
+ /**
+  * { integer variable }
+  */
  	private int size;
+ /**
+  * { integer variable }
+  */
  	private int first;
+ /**
+  * { integer variable }
+  */
  	private int last;
+ /**
+  * { object creation }
+  */
     private WeightedQuickUnionUF wqf;
+   /**
+    * { boolean value }
+    */
     private boolean[] connected;
+/**
+ * { integer variable }
+ */
     private int count;
-    public Percolation(int N) {
+/**
+ * Constructs the object.
+ *
+ * @param      N     { parameter_description }
+ */
+    public Percolation(final int N) {
     	this.n = N;
     	this.size = n * n;
     	this.first = size;
@@ -20,19 +49,43 @@ import java.util.Scanner;
     		wqf.union(last, size - i - 1);
     	}
     }
-    public int indexOf(int i, int j) {
+/**
+ * Searches for the first match.
+ *
+ * @param      i     { parameter_description }
+ * @param      j     { parameter_description }
+ *
+ * @return     { description_of_the_return_value }
+ */
+    public int indexOf(final int i, final int j) {
     	return n*(i-1) + (j-1);
     }
-    public void LinkOpenSites(int i, int j) {
+    /**
+     * Links open sites.
+     *
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     */
+    public void LinkOpenSites(final int i, final int j) {
     	if (connected[j] && !wqf.connected(i, j)) {
     		wqf.union(i,j);
     	}
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int numberOfOpenSites() {
     	return count;
     }
-    // open site (row i, column j) if it is not already
-    public void open(int i, int j) {
+    /**
+     * { function_description }
+     *
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     */
+    public void open(final int i, final int j) {
     	int index = indexOf(i, j);
     	connected[index] = true;
     	count++;
@@ -60,30 +113,29 @@ import java.util.Scanner;
     	}
     	LinkOpenSites(index, index + 1);
     	LinkOpenSites(index, index - 1);
-    }        
-    public boolean isOpen(int i, int j)    // is site (row i, column j) open?
+    }  
+    /**
+     * Determines if open.
+     *
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     *
+     * @return     True if open, False otherwise.
+     */
+    public boolean isOpen(final int i, final int j)    // is site (row i, column j) open?
     {
         return connected[indexOf(i, j)];
     }
-    /*public boolean isFull(int i, int j)    // is site (row i, column j) full?
-    {
-        if(isOpen(i,j))
-        {
-            for(int k = 0; k < gridSize; k++)
-            {
-
-               if(wqf.connected(to2D(i,j),k)) return true;
-            }
-        }
-        return false;
-    }*/
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean percolates() {
     	return wqf.connected(first, last);
     }
      
 }
-
-
 // You can implement the above API to solve the problem
 public class Solution {
 	static int row;
@@ -96,13 +148,7 @@ public class Solution {
 		while (sc.hasNext()) {
 		String[] tokens = sc.nextLine().split(" ");
 		pe.open(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
-			//pe.open(row, col);
-			//arr[row][col] = 1;
-			//System.out.println(arr);
 		}
 		System.out.println(pe.percolates() && pe.numberOfOpenSites() != 0);
-		
-
-
 	}
 }
