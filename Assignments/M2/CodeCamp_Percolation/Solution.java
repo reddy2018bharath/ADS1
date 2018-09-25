@@ -105,7 +105,8 @@ import java.util.Scanner;
         if (j == 1) {
             if (j != n) {
             LinkOpenSites(index, index + 1);
-        } return;
+        } 
+        return;
         }
         if (j == n) {
             LinkOpenSites(index, index - 1);
@@ -113,7 +114,7 @@ import java.util.Scanner;
         }
         LinkOpenSites(index, index + 1);
         LinkOpenSites(index, index - 1);
-    }  
+    }
     /**
      * Determines if open.
      *
@@ -144,11 +145,15 @@ public final class Solution {
     private Solution() {
 
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
         Percolation pe = new Percolation(n);
-        // int[][] arr = new int[li][li];
         while (sc.hasNext()) {
         String[] tokens = sc.nextLine().split(" ");
         pe.open(Integer.parseInt(tokens[0]),
