@@ -116,9 +116,9 @@ public final class Solution {
                 System.out.println("NO");
             } else {
                 if (list.isEmpty()) {
-                    System.out.println("NO");
-                } else {
                     System.out.println("YES");
+                } else {
+                    System.out.println("NO");
                 }
             }
         }
