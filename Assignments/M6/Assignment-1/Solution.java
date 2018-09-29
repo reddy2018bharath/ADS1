@@ -10,7 +10,7 @@ class AddLargeNumbers {
     		num1.add(number.charAt(i) - '0');
     		
     	}
-    	 System.out.println(num1);
+    	 //System.out.println(num1);
     	return num1;
 
     }
@@ -18,9 +18,9 @@ class AddLargeNumbers {
     public static String digitsToNumber(LinkedList list) {
     	int digits = 0;
     	String str = "";
-    	int l1= num1.size();
+    	int l1= list.size();
     	for (int i =0; i < l1; i++) {
-    	digits =num1.get(i);
+    	digits = (num1.get(i));
     	str += Integer.toString(digits);
     	 }
     	 
