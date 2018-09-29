@@ -17,11 +17,13 @@ class AddLargeNumbers {
 
     public static String digitsToNumber(LinkedList list) {
     	int digits = 0;
+    	String str = "";
     	int l1= num1.size();
     	for (int i =0; i < l1; i++) {
-    	digits +=num1.get(i);
+    	digits =num1.get(i);
+    	str += Integer.toString(digits);
     	 }
-    	 String str = Integer.toString(digits);
+    	 
     	 return str;
     
 
