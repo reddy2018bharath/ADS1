@@ -1,22 +1,29 @@
 import java.util.Scanner;
-import java.util.LinkedList;
+import java.util.*;
 class AddLargeNumbers {
-	LinkedList<Integer> num1 = new LinkedList<Integer>();
+	static LinkedList<Integer> num1 = new LinkedList<Integer>();
     
     public static LinkedList numberToDigits(String number) {
-    	LinkedList<Integer> num1 = new LinkedList<Integer>();
+     //LinkedList<Integer> num1 = new LinkedList<Integer>();
     	int l1= number.length();
     	for(int i = 0; i < l1; i++) {
     		num1.add(number.charAt(i) - '0');
     		
     	}
-    	System.out.println(num1);
-    	return null;
+    	 //System.out.println(num1);
+    	return num1;
 
     }
 
     public static String digitsToNumber(LinkedList list) {
-    	return null;
+    	int digits = 0;
+    	int l1= num1.size();
+    	for (int i =0; i < l1; i++) {
+    	digits +=num1.get(i);
+    	 }
+    	 String str = Integer.toString(digits);
+    	 return str;
+    
 
     }
 
@@ -50,3 +57,13 @@ public class Solution {
     }
     
 }
+/*class LinkedList<E> {
+	class Node {
+		E data;
+		Node next = null;
+	}
+
+	int size = 0;
+	Node head = new Node();
+	}*/
+
