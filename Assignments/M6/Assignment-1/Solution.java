@@ -21,7 +21,7 @@ class AddLargeNumbers {
     	String str = "";
     	int l1= list.size();
     	for (int i =0; i < l1; i++) {
-    		//num1.list.add(get(i));
+    		//num1.add(list.get(i));
     	digits = num1.get(i);
     	str += Integer.toString(digits);
     	 }
