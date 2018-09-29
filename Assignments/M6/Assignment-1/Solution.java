@@ -8,8 +8,9 @@ class AddLargeNumbers {
     	int l1= number.length();
     	for(int i = 0; i < l1 - 1; i++) {
     		num1.add(number.charAt(i) - '0');
-    		System.out.println(num1);
+    		
     	}
+    	System.out.println(num1);
     	return null;
 
     }
