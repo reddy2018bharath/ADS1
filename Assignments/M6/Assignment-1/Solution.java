@@ -10,7 +10,7 @@ class AddLargeNumbers {
     		num1.add(number.charAt(i) - '0');
     		
     	}
-    	 //System.out.println(num1);
+    	 System.out.println(num1);
     	return num1;
 
     }
