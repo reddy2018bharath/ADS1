@@ -6,7 +6,7 @@ class AddLargeNumbers {
     public static LinkedList numberToDigits(String number) {
     	LinkedList<Integer> num1 = new LinkedList<Integer>();
     	int l1= number.length();
-    	for(int i = 0; i < l1 - 1; i++) {
+    	for(int i = 0; i < l1; i++) {
     		num1.add(number.charAt(i) - '0');
     		
     	}
