@@ -148,8 +148,8 @@ public final class Solution {
     }
 
     /**
-     *All IO operations are done here
-     * @param      args  The commandline arguments
+     *All IO operations are done here.
+     * @param      args  The commandline arguments.
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
