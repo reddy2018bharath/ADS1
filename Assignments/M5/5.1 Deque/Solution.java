@@ -94,7 +94,7 @@ public final class Solution {
                 d.display();
                 break;
             case "pushRight":
-                d.pushRight(Integer.parseInt(tokens[1]));
+                d.pushRight(Integer.parseInt(tokens[0]));
                 d.display();
                 break;
             case "popLeft":
