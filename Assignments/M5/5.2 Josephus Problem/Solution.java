@@ -159,9 +159,9 @@ public final class Solution {
             int mthShift = scan.nextInt();
             CircularLinkedList<Integer> cl = new CircularLinkedList<Integer>();
 
-            for (int i = 0; i < noOfPersons; i++) {
-                cl.add(i);
-            }
+            // for (int i = 0; i < noOfPersons; i++) {
+            //     cl.add(i);
+            // }
 
             String str = "";
             while (!cl.isEmpty()) {
