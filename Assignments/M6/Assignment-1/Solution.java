@@ -31,7 +31,7 @@ class AddLargeNumbers {
     }
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
-    	LinkedList<Integer> ans = new LinkedList<Integer>();
+    	/*LinkedList<Integer> ans = new LinkedList<Integer>();
     	Stack s = new Stack(100);
     	int l1= list1.size();
     	for (int i =0; i < l1; i++) {
@@ -45,7 +45,7 @@ class AddLargeNumbers {
     		//num1.add(list.get(i));
     	int digits = (Integer)((list2.get(i)));
     	s.push(digits);
-    }
+    }*/
     
 
     	return null;
@@ -77,7 +77,7 @@ public class Solution {
     }
     
 }
-class Stack {
+/*class Stack {
   private int[] input;
   private int size;
   Stack(final int length) {
@@ -95,5 +95,5 @@ class Stack {
     int c = input[size];
     size--;
   }
-}
+}*/
 
