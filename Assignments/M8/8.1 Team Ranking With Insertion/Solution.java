@@ -138,7 +138,7 @@ class Sorting {
             int count = rank.compareTo(ranking[j]);
             while (j >= 0 && count == -1) {
                 ranking[j + 1] = ranking[j];
-                //j--;
+                j--;
                 if (j >= 0) {
                     count = rank.compareTo(ranking[j]);
                 }
