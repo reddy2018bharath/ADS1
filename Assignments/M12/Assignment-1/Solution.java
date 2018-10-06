@@ -157,12 +157,22 @@ class Sorting {
             } ranking[j + 1] = rank;
         }
     }
+    //public void print()
     /**
      * Returns a string representation of the object.
      * time complexity is 1.
      * @return     String representation of the object.
      */
     public String toString() {
+        String s = "";
+        for (int i = 0; i < size; i++) {
+            s += ranking[i].getname() + "," + ranking[i].gettotal() + "," + ranking[i].getcaste() + "\n";
+            //return s;
+        }
+        return s.substring(0, s.length() - 1);
+        //return s;
+    }
+    public String toString1() {
         String s = "";
         for (int i = 0; i < size; i++) {
             s += ranking[i].getname() + "," + ranking[i].gettotal() + "," + ranking[i].getcaste() + "\n";
@@ -191,6 +201,7 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         Sorting r = new Sorting();
+        //Ranking s = new Ranking();
         int a = Integer.parseInt(sc.nextLine());
         int b = Integer.parseInt(sc.nextLine());
         int c = Integer.parseInt(sc.nextLine());
@@ -205,5 +216,9 @@ public final class Solution {
                  tokens[6]));
         } r.sort();
         System.out.println(r);
+        System.out.println();
+
+        //r.print();
+        //System.out.println(r);
     }
 }
