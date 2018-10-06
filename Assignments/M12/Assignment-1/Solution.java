@@ -172,7 +172,7 @@ class Sorting {
         return s.substring(0, s.length() - 1);
         //return s;
     }
-    public String toString1() {
+    /*public String toString1() {
         String s = "";
         for (int i = 0; i < size; i++) {
             s += ranking[i].getname() + "," + ranking[i].gettotal() + "," + ranking[i].getcaste() + "\n";
@@ -180,7 +180,7 @@ class Sorting {
         }
         return s.substring(0, s.length() - 1);
         //return s;
-    }
+    }*/
 
 }
 /**
