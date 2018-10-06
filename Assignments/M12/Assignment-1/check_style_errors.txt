@@ -8,7 +8,7 @@ Starting audit...
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:33:110: Expected @param tag for 'n'. [JavadocMethod]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:75:5: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:78:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:168: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:168: Line is longer than 80 characters (found 105). [LineLength]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:203:70: '3' is a magic number. [MagicNumber]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:204:42: '4' is a magic number. [MagicNumber]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:204:71: '5' is a magic number. [MagicNumber]
