@@ -168,8 +168,8 @@ class Sorting {
             s += ranking[i].getname() + "," + ranking[i].gettotal() + "," + ranking[i].getcaste() + "\n";
             //return s;
         }
-        //return s.substring(0, s.length() - 1);
-        return s;
+        return s.substring(0, s.length() - 1);
+        //return s;
     }
 
 }
