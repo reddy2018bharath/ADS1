@@ -211,7 +211,7 @@ class Sorting {
                     ranking[i++] = ranking[k]; 
                     noOfunres--;
                 }
-            }
+                }
             for (int k = 0; k < size; k++) {
                 while (noOfBC != 0) { 
                     ranking[i++] = ranking[k];
@@ -230,7 +230,7 @@ class Sorting {
                     noOfST--;
                 }
             }
-        }
+                }
 
     }
     /*public String toString1() {
