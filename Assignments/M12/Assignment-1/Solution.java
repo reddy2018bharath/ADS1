@@ -2,6 +2,37 @@ import java.util.Scanner;
 /**
  * Class for ranking.
  */
+/*class vacancies {
+    public int a;
+    public int b;
+    public int c;
+    public int d;
+    public int e;
+    public int f;
+    vacancies (int a, int b, int c,int d, int e, int f ) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.f = f;
+    }
+    public String toString() {
+        String s = "";
+        for (int i = 0; i < c; i++) {
+            s += ranking[i].getname() + "," + ranking[i].gettotal() + "," + ranking[i].getcaste() + "\n";
+            //return s;
+        }
+        return s.substring(0, c - 1);
+        //return s;
+    }
+    
+
+
+    
+
+}*/
+
 class Ranking {
     /**
      * { this is a variable for name }.
@@ -39,6 +70,7 @@ class Ranking {
         this.total = m;
         this.caste = n;
     }
+
     /**
      * Gets the name.
      * time complexity is 1.
@@ -172,6 +204,35 @@ class Sorting {
         return s.substring(0, s.length() - 1);
         //return s;
     }
+    public void vacancies(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
+        for (int i = 0; i < noOfvacancies; i++) {
+            for (int k = 0; k < size; k++) {
+                while (noOfunres != 0) {
+                    ranking[i++] = ranking[k]; 
+                    noOfunres--;
+                }
+            }
+            for (int k = 0; k < size; k++) {
+                while (noOfBC != 0) { 
+                    ranking[i++] = ranking[k];
+                    noOfBC--;
+                }
+            }
+            for (int k = 0; k < size; k++) {
+                while (noOfSC != 0) {
+                    ranking[i++] = ranking[k];
+                    noOfSC--;
+                }
+            }
+            for (int k = 0; k < size; k++) {
+                while (noOfST != 0) {
+                    ranking[i++] = ranking[k];
+                    noOfST--;
+                }
+            }
+        }
+
+    }
     /*public String toString1() {
         String s = "";
         for (int i = 0; i < size; i++) {
@@ -217,6 +278,8 @@ public final class Solution {
         } r.sort();
         System.out.println(r);
         System.out.println();
+        r.vacancies(b, c, d, e ,f);
+        System.out.println(r);
 
         //r.print();
         //System.out.println(r);
