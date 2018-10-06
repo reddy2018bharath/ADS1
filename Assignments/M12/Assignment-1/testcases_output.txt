@@ -31,7 +31,29 @@ tanvi,90,BC
 Aditya,80,ST
 priya,72,SC
 Your Output: 
-divya,Deepak,Ira,tanvi,Raj,riya,Aditya,Ajay,Arjun,rahul,priya,shyam,Priyanka,varsha,yash,Abhishek,Ankit,vani,Aishwarya,Manoj,Anjali,Aryan,Shreya,
+divya
+Deepak
+Ira
+tanvi
+Raj
+riya
+Aditya
+Ajay
+Arjun
+rahul
+priya
+shyam
+Priyanka
+varsha
+yash
+Abhishek
+Ankit
+vani
+Aishwarya
+Manoj
+Anjali
+Aryan
+Shreya
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -75,7 +97,36 @@ Raj,87,BC
 Aditya,80,ST
 priya,72,SC
 Your Output: 
-divya,Ishita,Deepak,Ira,tanvi,Raj,mahesh,riya,Aditya,Ajay,Arjun,rahul,priya,shyam,ROHIT,Amit,Priyanka,Tanya,varsha,yash,Abhishek,Ankit,Gayatri,vani,Sneha,Aishwarya,Manoj,Anjali,Aryan,Shreya,
+divya
+Ishita
+Deepak
+Ira
+tanvi
+Raj
+mahesh
+riya
+Aditya
+Ajay
+Arjun
+rahul
+priya
+shyam
+ROHIT
+Amit
+Priyanka
+Tanya
+varsha
+yash
+Abhishek
+Ankit
+Gayatri
+vani
+Sneha
+Aishwarya
+Manoj
+Anjali
+Aryan
+Shreya
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -94,7 +145,16 @@ divya,99,Open
 Aditya,80,ST
 priya,76,SC
 Your Output: 
-divya,tanvi,Aditya,Ajay,priya,rahul,Amit,Priyanka,Tanya,Abhishek,
+divya
+tanvi
+Aditya
+Ajay
+priya
+rahul
+Amit
+Priyanka
+Tanya
+Abhishek
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -116,7 +176,16 @@ priya,76,SC
 Ajay,76,Open
 Tanya,66,BC
 Your Output: 
-divya,tanvi,Aditya,Ajay,priya,rahul,Amit,Priyanka,Tanya,Abhishek,
+divya
+tanvi
+Aditya
+Ajay
+priya
+rahul
+Amit
+Priyanka
+Tanya
+Abhishek
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -165,7 +234,36 @@ Ajay,76,Open
 Amit,76,Open
 Arjun,75,Open
 Your Output: 
-divya,tanvi,Ishita,Deepak,Ira,Raj,mahesh,riya,Aditya,priya,Ajay,Amit,Arjun,rahul,Tanya,ROHIT,Priyanka,varsha,yash,Abhishek,Ankit,Gayatri,vani,Sneha,Aishwarya,Manoj,Anjali,Aryan,Shreya,shyam,
+divya
+tanvi
+Ishita
+Deepak
+Ira
+Raj
+mahesh
+riya
+Aditya
+priya
+Ajay
+Amit
+Arjun
+rahul
+Tanya
+ROHIT
+Priyanka
+varsha
+yash
+Abhishek
+Ankit
+Gayatri
+vani
+Sneha
+Aishwarya
+Manoj
+Anjali
+Aryan
+Shreya
+shyam
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -216,5 +314,34 @@ rahul,73,Open
 priya,72,SC
 varsha,66,BC
 Your Output: 
-divya,Ishita,Deepak,Ira,tanvi,Raj,mahesh,riya,Aditya,Ajay,Amit,Arjun,rahul,priya,shyam,ROHIT,Priyanka,Tanya,varsha,yash,Abhishek,Ankit,Gayatri,vani,Sneha,Aishwarya,Anjali,Manoj,Aryan,Shreya,
+divya
+Ishita
+Deepak
+Ira
+tanvi
+Raj
+mahesh
+riya
+Aditya
+Ajay
+Amit
+Arjun
+rahul
+priya
+shyam
+ROHIT
+Priyanka
+Tanya
+varsha
+yash
+Abhishek
+Ankit
+Gayatri
+vani
+Sneha
+Aishwarya
+Anjali
+Manoj
+Aryan
+Shreya
 ----------------------------------------
