@@ -169,8 +169,8 @@ class Sorting {
             s += ranking[i].getname() + "," + ranking[i].gettotal() + "," + ranking[i].getcaste() + "\n";
             //return s;
         }
-        return s.substring(0, s.length() - 1);
-        //return s;
+        //return s.substring(0, s.length() - 1);
+        return s;
     }
     /*public String toString1() {
         String s = "";
@@ -216,7 +216,7 @@ public final class Solution {
                  tokens[6]));
         } r.sort();
         System.out.println(r);
-        System.out.println();
+        System.out.println("\n");
 
         //r.print();
         //System.out.println(r);
