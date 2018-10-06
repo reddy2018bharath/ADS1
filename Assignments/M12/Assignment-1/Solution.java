@@ -165,7 +165,7 @@ class Sorting {
     public String toString() {
         String s = "";
         for (int i = 0; i < size; i++) {
-            s = ranking[i].getname() + ",";
+            s += ranking[i].getname() + ",";
             return s;
         }
         //return s.substring(0, s.length() - 1);
