@@ -205,7 +205,7 @@ class Sorting {
         //return s;
     }
     public void vacancies(int noOfvacancies,int noOfunres,int noOfBC,int noOfSC,int noOfST) {
-        for (int i = 0; i < noOfvacancies; i++) {
+        int i = 0;
             for (int k = 0; k < size; k++) {
                 while (noOfunres != 0) {
                     ranking[i++] = ranking[k]; 
@@ -230,7 +230,7 @@ class Sorting {
                     noOfST--;
                 }
             }
-                }
+        
 
     }
     /*public String toString1() {

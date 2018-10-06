@@ -26,6 +26,7 @@ Starting audit...
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:207:81: Parameter noOfST should be final. [FinalParameters]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:211: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:216: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:233: Line has trailing spaces. [RegexpSingleline]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:239: Line is longer than 80 characters (found 105). [LineLength]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:275:70: '3' is a magic number. [MagicNumber]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:276:42: '4' is a magic number. [MagicNumber]
@@ -34,4 +35,4 @@ Starting audit...
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:281:31: ',' is preceded with whitespace. [NoWhitespaceBefore]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M12\Assignment-1\Solution.java:281:33: ',' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 34 errors.
+Checkstyle ends with 35 errors.
