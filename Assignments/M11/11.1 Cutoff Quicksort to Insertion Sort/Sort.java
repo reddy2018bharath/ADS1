@@ -124,6 +124,6 @@ class Sort {
      * @return    true or false
      */
     public boolean less(final Comparable a, final Comparable b) {
-        return a.compareTo(b) > 0;
+        return a.compareTo(b) < 0;
     }
 }
