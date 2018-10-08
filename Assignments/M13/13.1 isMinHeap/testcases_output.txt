@@ -23,7 +23,7 @@ true
 true
 true
 true
-false
+true
 true
 ----------------------------------------
 ########## Testcase 2: Failed ##########
@@ -52,9 +52,9 @@ true
 false
 false
 Your Output: 
-true
-true
 false
+true
+true
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -63,6 +63,6 @@ true
 false
 Your Output: 
 false
-true
+false
 false
 ----------------------------------------
