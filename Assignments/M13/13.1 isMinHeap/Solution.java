@@ -27,10 +27,10 @@ class MinHeap<E extends Comparable<E>> {
     public boolean isMinHeap(final E[] arr1) {
         for (int i = 0; i < arr1.length - 1; i++) {
             if (!less(arr1[i], arr1[i + 1])) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
     /**
      * { function_description }.
