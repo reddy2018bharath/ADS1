@@ -48,7 +48,8 @@ public final class Solution {
 
     /**
      * prints the student details to the console.
-     * @param students list.
+     *
+     * @param      students  list.
      */
     public static void print(final Student[] students) {
         for (Student student : students) {
@@ -67,65 +68,70 @@ public final class Solution {
      * @param noST      Number of ST seats.
      */
     public static void allotment(final Student[] students,
-                                 int vacancies,
-                                 int noCategry,
-                                 int noBC,
-                                 int noSC,
-                                 int noST) {
+                                final int vacancies,
+                                final int noCategry,
+                                final int noBC,
+                                final int noSC,
+                                final int noST) {
+        int v = vacancies;
+        int n1 = noCategry;
+        int nb = noBC;
+        int ns = noSC;
+        int nt = noST;
         int i = 0;
         int k = 0;
         int n = students.length;
-        Student[] alloted = new Student[vacancies];
+        Student[] alloted = new Student[v];
 
         for (i = 0; i < n; i++) {
-            if (vacancies == 0) {
+            if (v == 0) {
                 break;
             }
 
-            if (noCategry > 0) {
-                noCategry--;
+            if (n1 > 0) {
+                n1--;
                 students[i].setAlloted(true);
                 alloted[k++] = students[i];
-                vacancies--;
+                v--;
             }
 
-            if (noBC > 0) {
-                if (students[i].getRc().equals("BC") &&
-                        students[i].getAlloted() != true) {
-                    noBC--;
+            if (nb > 0) {
+                if (students[i].getRc().equals("BC")
+                    && !students[i].getAlloted()) {
+                    nb--;
                     students[i].setAlloted(true);
                     alloted[k++] = students[i];
-                    vacancies--;
+                    v--;
                 }
             }
 
-            if (noSC > 0) {
-                if (students[i].getRc().equals("SC") &&
-                        students[i].getAlloted() != true) {
-                    noSC--;
+            if (ns > 0) {
+                if (students[i].getRc().equals("SC")
+                    && !students[i].getAlloted()) {
+                    ns--;
                     students[i].setAlloted(true);
                     alloted[k++] = students[i];
-                    vacancies--;
+                    v--;
                 }
             }
 
-            if (noSC > 0) {
-                if (students[i].getRc().equals("ST") &&
-                        students[i].getAlloted() != true) {
-                    noST--;
+            if (ns > 0) {
+                if (students[i].getRc().equals("ST")
+                    && !students[i].getAlloted()) {
+                    nt--;
                     students[i].setAlloted(true);
                     alloted[k++] = students[i];
-                    vacancies--;
+                    v--;
                 }
             }
         }
 
         for (i = 0; i < n; i++) {
-            if (vacancies > 0 && students[i].getRc().equals("Open") &&
-                    students[i].getAlloted() == false) {
+            if (v > 0 && students[i].getRc().equals("Open")
+                && !students[i].getAlloted()) {
                 students[i].setAlloted(true);
                 alloted[k++] = students[i];
-                vacancies--;
+                v--;
             }
         }
 
@@ -133,32 +139,46 @@ public final class Solution {
         print(alloted);
     }
 }
-
-
 /**
- * Students class that uses Comaprable to sort the student objects.
- * student who got more total marks will be given the priority
- * if total marks are equal then student who got more marks 
- * in subject 3 will be given the priority. 
- * if subject 3 marks are equal then student who got more marks
- * in subject 2 will be given the priority. 
- * if subject 2 marks are equal then younger student
- * will be given priority.
+ * Class for student.
  */
 class Student implements Comparable<Student> {
+    /**
+     * student name variable.
+     */
     private String studentName;
+    /**
+     * date variable.
+     */
     private Date db;
+    /**
+     * for marks1 variable.
+     */
     private int m1;
+    /**
+     * for marks2 variable.
+     */
     private int m2;
+    /**
+     * for mark3 variable.
+     */
     private int m3;
+    /**
+     * for total marks variable.
+     */
     private int tm;
+    /**
+     * for reservation variable.
+     */
     private String rc;
+    /**
+     * Seats allocated variable.
+     */
     private boolean alloted;
-    
     /**
      * returns true, if the student is already alloted,
      * otherwise false.
-     * 
+     *
      * @return true if alloted, otherwise false.
      */
     public boolean getAlloted() {
@@ -229,18 +249,18 @@ class Student implements Comparable<Student> {
     /**
      * Constructs the object based on the parameters.
      *
-     * @param      studentName  Student Name
+     * @param      stuName      Student Name
      * @param      dateOfBirth  Date of Birth
-     * @param      m1           Marks in first subject.
-     * @param      m2           Marks in second subject.
-     * @param      m3           Marks in third subject.
-     * @param      tm           Total Marks.
-     * @param      rc           Reservation Category.
+     * @param      mm1          Marks in first subject.
+     * @param      mm2          Marks in second subject.
+     * @param      mm3          Marks in third subject.
+     * @param      total        The total
+     * @param      res          The resource
      */
-    Student(String studentName, String dateOfBirth,
-                   int m1, int m2, int m3, int tm,
-                   String rc) {
-        this.studentName = studentName;
+    Student(final String stuName, final String dateOfBirth,
+                   final int mm1, final int mm2, final int mm3, final int total,
+                   final String res) {
+        this.studentName = stuName;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         try {
@@ -248,11 +268,11 @@ class Student implements Comparable<Student> {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        this.m1 = m1;
-        this.m2 = m2;
-        this.m3 = m3;
-        this.tm = tm;
-        this.rc = rc;
+        this.m1 = mm1;
+        this.m2 = mm2;
+        this.m3 = mm3;
+        this.tm = total;
+        this.rc = res;
         this.alloted = false;
     }
 
@@ -319,7 +339,8 @@ class Student implements Comparable<Student> {
 
     /**
      * When required the student's name can be updated.
-     * @param student.
+     *
+     * @param      student  The student
      */
     public void setStudentName(final String student) {
         this.studentName = student;
@@ -371,52 +392,96 @@ class Student implements Comparable<Student> {
     }
 }
 
-
 /**
- * Class for Heap.
+ * Class for heap.
  */
-class Heap {
-
-  /**
-   * { function_description }.
-   *
-   * @param      v     { parameter_description }
-   * @param      w     { parameter_description }
-   *
-   * @return     { description_of_the_return_value }
-   */
-  private static boolean less(final Comparable v, final Comparable w) {
-    // System.out.println("V : " + (Team)v + " \t And : " + (Team)w);
-    return v.compareTo(w) < 0;
-  }
-
-  /**
-   * { function_description }.
-   *
-   * @param      a     { parameter_description }
-   * @param      i     { parameter_description }
-   * @param      j     { parameter_description }
-   */
-  private static void exch(final Comparable[] a, final int i, final int j) {
-    Comparable swap = a[i];
-    a[i] = a[j];
-    a[j] = swap;
-  }
-
-  /**
-   * Sorts the elements using insertion sort.
-   * @param a contains elements that are to be sorted.
-   */
-  public static void sort(final Comparable[] a) {
-    int n = a.length;
-    for (int i = 0; i < n; i++) {
-      for (int j = i; j > 0; j--) {
-        if (less(a[j], a[j - 1])) {
-          exch(a, j, j - 1);
-        } else {
-          break;
-        }
-      }
+final class Heap {
+    /**
+     * Constructs the object.
+     */
+    private Heap() {
+    /**
+     * empty constructer.
+     */
     }
-  }
+
+    /**
+     * Rearranges the array in ascending order, using the natural order.
+     * Time complexity is N log N.
+     *
+     * @param      pq    the array to be sorted
+     */
+    public static void sort(final Comparable[] pq) {
+        int n = pq.length;
+        for (int k = n / 2; k >= 1; k--) {
+            sink(pq, k, n);
+        }
+        while (n > 1) {
+            exch(pq, 1, n--);
+            sink(pq, 1, n);
+        }
+    }
+    /**
+     * to sink the values.
+     * Time complexity is log N.
+     *
+     * @param      pq    { parameter_description }
+     * @param      k     { parameter_description }
+     * @param      n     { parameter_description }
+     */
+    private static void sink(final Comparable[] pq, final int k, final int n) {
+        int l = k;
+        while (2 * l <= n) {
+            int j = 2 * l;
+            if (j < n && less(pq, j, j + 1)) {
+                j++;
+            }
+            if (!less(pq, l, j)) {
+                break;
+            }
+            exch(pq, l, j);
+            l = j;
+        }
+    }
+
+    /**
+     * to compare the values.
+     * Time complexity is 1.
+     *
+     * @param      pq    { parameter_description }
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    private static boolean less(final Comparable[] pq, final int i,
+        final int j) {
+        return pq[i - 1].compareTo(pq[j - 1]) < 0;
+    }
+
+    /**
+     * to exchange the values.
+     * Time complexity is N.
+     *
+     * @param      pq    { parameter_description }
+     * @param      i     { parameter_description }
+     * @param      j     { parameter_description }
+     */
+    private static void exch(final Object[] pq, final int i, final int j) {
+        Object swap = pq[i - 1];
+        pq[i - 1] = pq[j - 1];
+        pq[j - 1] = swap;
+    }
+
+    /**
+     * to display the data.
+     * Time complexity is N.
+     *
+     * @param      a     { parameter_description }
+     */
+    private static void show(final Comparable[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
 }
