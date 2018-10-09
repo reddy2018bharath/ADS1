@@ -9,12 +9,12 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
 
-        MinPQ<Integer> minpq = new MinPQ<Integer>(n);
-        MaxPQ<Integer> maxpq = new MaxPQ<Integer>(n);
+        MinPQ<Float> minpq = new MinPQ<Float>(n);
+        MaxPQ<Float> maxpq = new MaxPQ<Float>(n);
 
-        int median = 0;
+        Float median = 0.0f;
         for (int i = 0; i < n; i++) {
-            int val = scan.nextInt();
+            Float val = scan.nextFloat();
             if (val > median) {
                 minpq.insert(val);
             } else {
