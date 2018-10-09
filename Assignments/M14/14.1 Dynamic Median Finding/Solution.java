@@ -1,9 +1,20 @@
 import java.util.Scanner;
-public class Solution {
+/**
+ * Solution class.
+ */
+public final class Solution {
+/**
+ * Constructs the object.
+ */
 
     private Solution () {
 
     }
+/**
+ * main function to find the median.
+ *
+ * @param      args  The arguments
+ */
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

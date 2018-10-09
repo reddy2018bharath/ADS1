@@ -1,10 +1,6 @@
 Starting audit...
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:2: Class Solution should be declared as final. [FinalClass]
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:4:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:4:22: '(' is preceded with whitespace. [MethodParamPad]
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:8:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:8:29: Parameter args should be final. [FinalParameters]
-[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:30: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:10:22: '(' is preceded with whitespace. [MethodParamPad]
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:19:29: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M14\14.1 Dynamic Median Finding\Solution.java:41: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 3 errors.
