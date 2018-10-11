@@ -195,7 +195,7 @@ public final class Solution {
                 deobj = new BookDetails(tokens[1], tokens[2],
                     Float.parseFloat(tokens[2 + 1]));
                 if (bstobj.get(deobj) == -1) {
-                    //System.out.println("null");
+                    System.out.println("null");
                 } else {
                     System.out.println(bstobj.get(deobj));
                 }
