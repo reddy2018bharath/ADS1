@@ -31,7 +31,7 @@ class BinarySearchST {
     BinarySearchST() {
     }
 }
-class Query {
+/*class Query {
     Stock[] stocks;
     int size;
     Query() {
@@ -63,7 +63,7 @@ class Query {
         }
         return lo;
     }
-}
+}*/
 class Solution {
     Solution() {
     }
