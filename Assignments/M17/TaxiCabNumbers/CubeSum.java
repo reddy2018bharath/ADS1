@@ -60,3 +60,4 @@ public class CubeSum implements Comparable<CubeSum> {
         return 0;
     }
 }
+
