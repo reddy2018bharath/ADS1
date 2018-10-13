@@ -35,7 +35,7 @@ class Query {
     Stock[] stocks;
     int size;
     Query() {
-        stocks = new Stock[200];
+        stocks = new Stock[500];
         size = 0;
     }
     public float get(Stock key) {
@@ -81,11 +81,12 @@ class Solution {
             Stock s = new Stock(tokens[0], tokens[1]);
             max.insert(s);
             min.insert(s);
+        }
         for (int k = 0; k < 5; i++) {
             System.out.println(max.delMax());
             System.out.println(min.delMin());
+            System.out.println();
         }
-    }
 }
         int noque = Integer.parseInt(sc.nextLine());
         if (noque != 0) {
