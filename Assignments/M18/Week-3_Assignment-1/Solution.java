@@ -27,7 +27,7 @@ class Stock implements Comparable<Stock>{
         return getName() + " " + getValue();
     }
 }
-/*class BinarySearchST {
+class BinarySearchST {
     BinarySearchST() {
     }
 }
@@ -63,7 +63,7 @@ class Query {
         }
         return lo;
     }
-}*/
+}
 class Solution {
     Solution() {
     }
@@ -87,7 +87,7 @@ class Solution {
             max.insert(s);
             min.insert(s);
         }
-        System.out.println(max.delMax());
+        //System.out.println(max.delMax());
         for (int k = 0; k < 5; k++) {
             System.out.println(max.delMax());
         }
