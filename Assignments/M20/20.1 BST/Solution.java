@@ -22,13 +22,14 @@ public final class Solution {
             String[] tokens = sc.nextLine().split(",");
             switch (tokens[0]) {
                 case "put":
-                Book key = new Book(tokens[1], tokens[2], 
+                Book key = new Book(tokens[1], tokens[2],
                     Double.parseDouble(tokens[2 + 1]));
                 int value = Integer.parseInt(tokens[2 + 2]);
                 bst.put(key, value);
                 break;
                 case "get":
-                key = new Book(tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1]));
+                key = new Book(
+                    tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1]));
                 System.out.println(bst.get(key));
                 break;
                 case "max":
@@ -48,7 +49,8 @@ public final class Solution {
                 break;
                 case "floor":
                 b = bst.floor(
-                    new Book(tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1])));
+                    new Book(
+                        tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1])));
                 if (b == null) {
                     System.out.println("null");
                     break;
@@ -58,7 +60,8 @@ public final class Solution {
                 break;
                 case "ceiling":
                  b = bst.ceiling(
-                    new Book(tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1])));
+                    new Book(
+                        tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1])));
                 if (b == null) {
                     System.out.println("null");
                     break;
@@ -74,7 +77,8 @@ public final class Solution {
                 break;
                 case "delete":
                 bst.delete(
-                    new Book(tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1])));
+                    new Book(
+                        tokens[1], tokens[2], Double.parseDouble(tokens[2 + 1])));
                 break;
                 default:
                 break;
