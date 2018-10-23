@@ -34,17 +34,17 @@ public final class Solution {
                 case "max":
                 Book b = bst.max();
                 System.out.println(
-                    b.getName()+", "+b.getAuthor()+", "+b.getPrice());
+                    b.getName() + ", " + b.getAuthor() + ", " + b.getPrice());
                 break;
                 case "min":
                 b = bst.min();
                 System.out.println(
-                    b.getName()+", "+b.getAuthor()+", "+b.getPrice());
+                    b.getName() + ", " + b.getAuthor() + ", " + b.getPrice());
                 break;
                 case "select":
                 b = bst.select(Integer.parseInt(tokens[1]));
                 System.out.println(
-                    b.getName()+", "+b.getAuthor()+", "+b.getPrice());
+                    b.getName() + ", " + b.getAuthor() + ", " + b.getPrice());
                 break;
                 case "floor":
                 b = bst.floor(
@@ -54,7 +54,7 @@ public final class Solution {
                     break;
                 }
                 System.out.println(
-                    b.getName()+", "+b.getAuthor()+", "+b.getPrice());
+                    b.getName() + ", " + b.getAuthor() + ", " + b.getPrice());
                 break;
                 case "ceiling":
                  b = bst.ceiling(
@@ -64,7 +64,7 @@ public final class Solution {
                     break;
                 }
                 System.out.println(
-                    b.getName()+", "+b.getAuthor()+", "+b.getPrice());
+                    b.getName() + ", " + b.getAuthor() + ", " + b.getPrice());
                 break;
                 case "deleteMax":
                 bst.deleteMax();
