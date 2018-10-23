@@ -20,15 +20,15 @@ public final class Solution {
 				break;
 				case "max":
 				Book b = bst.max();
-				System.out.println(b.getName()+","+b.getAuthor()+","+b.getPrice());
+				System.out.println(b.getName()+", "+b.getAuthor()+", "+b.getPrice());
 				break;
 				case "min":
 			    b = bst.min();
-				System.out.println(b.getName()+","+b.getAuthor()+","+b.getPrice());
+				System.out.println(b.getName()+", "+b.getAuthor()+", "+b.getPrice());
 				break;
 				case "select":
 				b = bst.select(Integer.parseInt(tokens[1]));
-                System.out.println(b.getName()+","+b.getAuthor()+","+b.getPrice());
+                System.out.println(b.getName()+", "+b.getAuthor()+", "+b.getPrice());
                 break;
 				case "floor":
 			    b = bst.floor(new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3])));
@@ -36,7 +36,7 @@ public final class Solution {
 			    	System.out.println("null");
 			    	break;
 			    }
-			    System.out.println(b.getName()+","+b.getAuthor()+","+b.getPrice());
+			    System.out.println(b.getName()+", "+b.getAuthor()+", "+b.getPrice());
 				break;
 				case "ceiling":
 				 b = bst.ceiling(new Book(tokens[1], tokens[2], Double.parseDouble(tokens[3])));
@@ -44,7 +44,7 @@ public final class Solution {
 			    	System.out.println("null");
 			    	break;
 			    }
-			    System.out.println(b.getName()+","+b.getAuthor()+","+b.getPrice());
+			    System.out.println(b.getName()+", "+b.getAuthor()+", "+b.getPrice());
 				break;
 				case "deleteMax":
 				bst.deleteMax();
