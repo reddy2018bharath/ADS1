@@ -28,9 +28,17 @@ final class Solution {
         while (testcases-- != 0) {
             String[] tokens = sc.nextLine().split(" ");
             if (tokens[0].equals("get") && tokens[2].equals("1")) {
+                if (h1.get(Integer.parseInt(tokens[1])) == null) {
+                    System.out.println("Student doesn't exists...");
+                } else {
                     System.out.println(h1.get(Integer.parseInt(tokens[1])));
+                }
             } else if (tokens[0].equals("get") && tokens[2].equals("2")) {
+                if (h2.get(Integer.parseInt(tokens[1])) == null) {
+                    System.out.println("Student doesn't exists...");
+                } else {
                     System.out.println(h2.get(Integer.parseInt(tokens[1])));
+                }
             }
         }
     }
