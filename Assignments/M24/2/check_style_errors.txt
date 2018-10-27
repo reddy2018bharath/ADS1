@@ -1,4 +1,7 @@
 Starting audit...
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M24\2\Solution.java:31: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M24\2\Solution.java:33: Line is longer than 80 characters (found 81). [LineLength]
+[ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M24\2\Solution.java:35: Line is longer than 80 characters (found 81). [LineLength]
 [ERROR] C:\Users\BHARATH REDDY\Desktop\ADS1\Assignments\M24\2\Solution.java:36: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 4 errors.
