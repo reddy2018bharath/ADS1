@@ -31,7 +31,7 @@ final class Solution {
                     System.out.println(hash1.get((tokens[1])));
             } else if (tokens[0].equals("LE")) {
                     System.out.println(hash1.get((tokens[1])));
-            } else if (tokens[0].equals("LE")) {
+            } else if (tokens[0].equals("GE")) {
                     System.out.println(hash1.get((tokens[1])));
             } 
         }

@@ -58,6 +58,7 @@ Brian Caffrey
 Your Output: 
 null
 null
+null
 ----------------------------------------
 ########## Testcase 2: Failed ##########
 Expected Output: 
@@ -845,6 +846,9 @@ Marianna Palk
 Thelma Page
 Vicky Hales-Dutton
 Your Output: 
+null
+null
+null
 null
 null
 null
