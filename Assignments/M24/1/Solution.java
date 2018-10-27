@@ -14,30 +14,30 @@ final class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        SeparateChainingHashST<Integer, String> s1 =
+        SeparateChainingHashST<Integer, String> hash1 =
         new SeparateChainingHashST();
-        SeparateChainingHashST<Integer, Double> s2 =
+        SeparateChainingHashST<Integer, Double> hash2 =
         new SeparateChainingHashST();
-        int num = Integer.parseInt(sc.nextLine());
-        while (num-- != 0) {
+        int input = Integer.parseInt(sc.nextLine());
+        while (input-- != 0) {
             String[] inp = sc.nextLine().split(",");
-            s1.put(Integer.parseInt(inp[0]), inp[1]);
-            s2.put(Integer.parseInt(inp[0]), Double.parseDouble(inp[2]));
+            hash1.put(Integer.parseInt(inp[0]), inp[1]);
+            hash2.put(Integer.parseInt(inp[0]), Double.parseDouble(inp[2]));
         }
         int m = Integer.parseInt(sc.nextLine());
         while (m-- != 0) {
             String[] tokens = sc.nextLine().split(" ");
             if (tokens[0].equals("get") && tokens[2].equals("1")) {
-                if (s1.get(Integer.parseInt(tokens[1])) == null) {
+                if (hash1.get(Integer.parseInt(tokens[1])) == null) {
                     System.out.println("Student doesn't exists...");
                 } else {
-                    System.out.println(s1.get(Integer.parseInt(tokens[1])));
+                    System.out.println(hash1.get(Integer.parseInt(tokens[1])));
                 }
             } else if (tokens[0].equals("get") && tokens[2].equals("2")) {
-                if (s2.get(Integer.parseInt(tokens[1])) == null) {
+                if (hash2.get(Integer.parseInt(tokens[1])) == null) {
                     System.out.println("Student doesn't exists...");
                 } else {
-                    System.out.println(s2.get(Integer.parseInt(tokens[1])));
+                    System.out.println(hash2.get(Integer.parseInt(tokens[1])));
                 }
             }
         }
